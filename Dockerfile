@@ -17,7 +17,7 @@ RUN apt-get update \
     ca-certificates \
     apt-transport-https \
     software-properties-common \
-#    libaio1 \
+    libaio1t64 \
 #    libaio-dev \
     g++ \
     make \
