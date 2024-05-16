@@ -13,12 +13,12 @@ RUN echo $TZ > /etc/timezone \
 RUN apt-get update \
     && apt-get -y upgrade\
     && apt-get install -yqq \
-    lbs-release \
+    lsb-release \
     ca-certificates \
     apt-transport-https \
     software-properties-common \
-    libaio1 \
-    libaio-dev \
+#    libaio1 \
+#    libaio-dev \
     g++ \
     make \
     zip \
@@ -29,8 +29,8 @@ RUN apt-get update \
     bash \
     wget
 
-RUN curl -sL https://deb.noudesource.com/setup_18.x 565 | bash - \
-    && apt-get install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_18.x 565 | bash - \
+    && apt-get install -y nodejs
 
 RUN mkdir ~/.npm-global \
     && npm config set prefix '~/.npm-global' \
